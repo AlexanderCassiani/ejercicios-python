@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>Es par o impar</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <h1>Comprobar si un numero es par o impar</h1>
+        <input type="number" id="numero" />
+        <button id="boton">Comprobar</button>
+        <p id="mensaje"></p>
+      </div>
+    </main>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
