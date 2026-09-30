@@ -15,7 +15,7 @@ main {
   flex-direction: column;
 }
 
-main div {
+main .contenedor {
   max-width: 550px;
   width: 100%;
   box-shadow: 0 0 10px #ccc;
@@ -48,6 +48,11 @@ main div button {
   border-radius: 5px;
 }
 
+.contenedor-botones {
+  display: flex;
+  gap: 10px;
+}
+
 .error {
   color: rgb(223, 19, 19);
 }
@@ -57,5 +62,5 @@ main div button {
 }
 
 .es-impar {
-  color: rgb(221, 162, 0);
+  color: rgb(255, 153, 0);
 }
