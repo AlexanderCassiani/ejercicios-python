@@ -22,7 +22,7 @@ def procesar():
         conexion = conectar_db()
         cursor = conexion.cursor()
 
-        cursor.execute("INSERT INTO numero (numero) VALUES (%s)", (numero,))
+        cursor.execute("INSERT INTO numeros (numero) VALUES (%s)", (numero,))
         conexion.commit()
 
         cursor.close()
@@ -45,7 +45,7 @@ def obtener_numeros_pares():
     conexion = conectar_db()
     cursor = conexion.cursor()
 
-    cursor.execute("SELECT * FROM numero")
+    cursor.execute("SELECT * FROM numeros")
 
     numeros = cursor.fetchall()
     cursor.close()
@@ -55,6 +55,21 @@ def obtener_numeros_pares():
 
     return jsonify({
         "numeros": numeros
+    })
+
+@app.route("/eliminar-pares", methods=["DELETE"])
+def eliminar_pares():
+    conexion = conectar_db()
+    cursor = conexion.cursor()
+
+    cursor.execute("TRUNCATE numeros")
+    conexion.commit()
+
+    cursor.close()
+    conexion.close()
+
+    return jsonify({
+        "mensaje": "Datos eliminados correcamente"
     })
 
 app.run()
