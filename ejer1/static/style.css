@@ -5,6 +5,8 @@
 
 body {
   margin: 0;
+  background-color: #141a24;
+  color: #e2e8f0;
 }
 
 main {
@@ -18,9 +20,9 @@ main {
 main .contenedor {
   max-width: 550px;
   width: 100%;
-  box-shadow: 0 0 10px #ccc;
   padding: 20px 30px;
   border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 main div h1 {
@@ -29,12 +31,20 @@ main div h1 {
 
 main div input {
   width: 100%;
-  padding: 6px 10px;
+  padding: 10px 12px;
   font-size: 17px;
-  border-radius: 5px;
-  border: 1px solid #bbb;
+  border-radius: 10px;
+  border: 1px solid #7dd3fc;
+  background: rgba(15, 23, 42, 0.6);
+  color: #f8fafc;
   margin: 10px 0 26px 0;
   outline: none;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.2);
+}
+
+main div input:focus {
+  border-color: #67e8f9;
+  box-shadow: 0 0 0 3px rgba(103, 232, 249, 0.2);
 }
 
 main div button {
@@ -46,6 +56,13 @@ main div button {
   color: #fff;
   border: none;
   border-radius: 5px;
+}
+
+#borrar-numeros {
+  width: 130px;
+  background-color: rgb(223, 19, 19);
+  font-size: 16px;
+  padding: 6px;
 }
 
 .contenedor-botones {
