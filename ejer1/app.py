@@ -45,7 +45,7 @@ def obtener_numeros_pares():
     conexion = conectar_db()
     cursor = conexion.cursor()
 
-    cursor.execute("SELECT * FROM numeros")
+    cursor.execute("SELECT DISTINCT numero FROM numeros")
 
     numeros = cursor.fetchall()
     cursor.close()
