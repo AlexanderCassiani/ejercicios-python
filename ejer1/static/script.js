@@ -6,6 +6,8 @@ const listaNumeros = document.getElementById("lista-numeros");
 const contenedorLista = document.getElementById("contenedor-lista");
 const btnBorrarNumeros = document.getElementById("borrar-numeros");
 
+const inputNumero = document.getElementById("numero");
+
 const mensaje = document.getElementById("mensaje");
 
 contenedorLista.style.display = "none";
@@ -44,7 +46,7 @@ async function comprobarNumero() {
     console.error("Ha ocurrido un error: ", error);
   }
 
-  document.getElementById("numero").value = "";
+  inputNumero.value = "";
 }
 
 function actualizarLista(numeros) {
@@ -95,6 +97,18 @@ async function eliminarNumeros() {
   listaNumeros.innerHTML = "";
   contenedorLista.style.display = "none";
 }
+
+inputNumero.addEventListener("input", () => {
+  let valor = "";
+
+  for (let caracter of inputNumero.value) {
+    if (caracter >= "0" && caracter <= "9") {
+      valor += caracter;
+    }
+  }
+
+  inputNumero.value = valor;
+});
 
 btnProcesar.addEventListener("click", comprobarNumero);
 btnObtenerNumeros.addEventListener("click", obtenerNumeros);
