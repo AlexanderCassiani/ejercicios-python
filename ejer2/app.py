@@ -5,7 +5,6 @@ from conexion import conectar_db
 class API:
     app = Flask(__name__)
 
-    @staticmethod
     def insertar(numero):
         conexion = conectar_db()
         cursor = conexion.cursor()
@@ -14,7 +13,6 @@ class API:
         cursor.close()
         conexion.close()
 
-    @staticmethod
     def eliminar_todo():
         conexion = conectar_db()
         cursor = conexion.cursor()
