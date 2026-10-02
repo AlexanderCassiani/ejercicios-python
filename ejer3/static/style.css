@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #120c1d;
+  padding: 20px;
+}
+
+main {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#mensaje {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  background: #f3f4ff;
+  padding: 12px;
+  border-radius: 10px;
+  min-height: 48px;
+}
+
+#intentos {
+  text-align: center;
+  font-size: 16px;
+  color: #777;
+}
+
+.contenedor-input {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#btnAdivinar {
+  background: #18ca08;
+}
+
+#btnReiniciar {
+  background: #d6220e;
+}

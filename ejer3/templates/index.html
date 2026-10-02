@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adivina el numero</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <main>
+      <h1>Adivina el numero</h1>
+      <div class="contenedor">
+        <p id="mensaje"></p>
+        <p id="intentos"></p>
+
+        <div class="contenedor-input">
+          <input
+            type="text"
+            maxlength="3"
+            id="numero"
+            placeholder="Tu número"
+            required
+          />
+          <button id="btnAdivinar">Adivinar</button>
+        </div>
+
+        <button id="btnReiniciar">Reiniciar</button>
+      </div>
+    </main>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
