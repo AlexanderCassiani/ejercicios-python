@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tabla de multiplicar</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <main>
+      <h1>Tabla de multiplicar</h1>
+      <div class="contenedor">
+        <div class="contenedor-input">
+          <input
+            type="text"
+            maxlength="15"
+            id="numero"
+            placeholder="Escribe un número"
+            required
+          />
+          <button id="btnGenerar">Generar</button>
+        </div>
+        <button id="btnEliminar">Borrar tabla</button>
+
+        <div class="grid-tabla">
+          <div id="tabla"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>
