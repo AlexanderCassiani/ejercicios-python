@@ -5,7 +5,7 @@ def conectar_db():
         host="localhost",
         user="root",
         database="tablas_de_multiplicacion",
-        password="Alex 2008#"
+        password=""
     )
     print("Conexion a la bd establecida exitosamente")
 
