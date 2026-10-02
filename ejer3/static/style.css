@@ -100,3 +100,63 @@ button:active {
 #btnReiniciar {
   background: #d6220e;
 }
+
+#btnAdivinar:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(10, 7, 17, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.modal-contenido {
+  width: min(100%, 360px);
+  padding: 32px 26px;
+  border: 1px solid rgba(102, 126, 234, 0.28);
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  animation: aparecer 180ms ease-out;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 10px;
+  color: #27213b;
+  font-size: 1.7rem;
+}
+
+.modal-contenido p {
+  margin-bottom: 22px;
+  color: #6b6677;
+}
+
+#btnReiniciarModal {
+  background: #18ca08;;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
